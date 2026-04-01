@@ -10,7 +10,7 @@ body {
 /* ===== HERO ===== */
 .hero {
   background: linear-gradient(75deg, #e6b3a8, #bfc6ff);
-  padding: 20px 0 100px;
+  padding: 0 0 100px;
   position: relative;
   overflow: hidden;
 }

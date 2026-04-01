@@ -9,7 +9,7 @@ body {
 
 /* ===== HERO ===== */
 .hero {
-  background: linear-gradient(135deg, #e6b3a8, #bfc6ff);
+  background: linear-gradient(75deg, #e6b3a8, #bfc6ff);
   padding: 20px 0 100px;
   position: relative;
   overflow: hidden;
@@ -148,8 +148,14 @@ flex: 1;
 
 /* 🔥 HOVER EFFECT */
 .tag a:hover {
-  background: #000;
+  background: #0b3d60;
   color: #fff;
+}
+.contact-li{
+    background: #0b3d60;
+    color: #fff !important;
+    padding: 10px;
+    border-radius: 20px;
 }
 
 .tag a:hover img {
@@ -164,9 +170,9 @@ flex: 1;
 }
 /* ===== POSITIONS (keep yours) ===== */
 .tag1 { top: 160px; left: 120px; }
-.tag2 { top: 160px; right: 120px; }
-.tag3 { bottom: 200px; left: 140px; }
-.tag4 { bottom: 180px; right: 140px; }
+.tag2 { top: 215px; right: 120px; }
+.tag3 { bottom: 165px; left: 140px; }
+.tag4 { bottom: 100px; right: 140px; }
 
 /* ===== CLIENT SHAPE (KEY PART) ===== */
 .client-shape {
@@ -239,7 +245,7 @@ flex: 1;
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 130px;
+  height: 100px;
 }
 
 /* 🔥 ONE CONTINUOUS GRADIENT */
@@ -541,7 +547,7 @@ bottom: 7px;
 
 /* SECTION */
 .portfolio-section {
-  background: #fff;
+  background: #f5f5f5;
   padding: 90px 0;
 }
 
@@ -596,6 +602,7 @@ bottom: 7px;
   position: relative;
   border-radius: 25px;
   overflow: hidden;
+  background: #fff; /* ensures clean cut */
 }
 
 /* IMAGE */
@@ -606,35 +613,33 @@ bottom: 7px;
   border-radius: 25px;
 }
 
-/* 🔥 TAG BAR (FIGMA STYLE CUT) */
-/* 🔥 TAG BAR RIGHT SIDE (FIGMA STYLE) */
+/* TAG BAR */
 .pf-tags {
-position: absolute;
+  position: absolute;
   top: 0;
   right: 0;
-  background: #fff;
-  padding: 20px 30px;
+
+  background: #f5f5f5;
+  padding: 20px 22px;
   font-size: 12px;
-  font-weight: 500;
-  white-space: nowrap;
-border-top-left-radius: 1px;
-  border-bottom-left-radius: 70px;
-  z-index: 2;
+
+  border-bottom-left-radius: 40px; /* smaller = clean */
+  z-index: 3;
 }
 
-/* 🔥 CUT NOTCH (RIGHT SIDE) */
+/* 🔥 REAL FIGMA CURVED CUT */
 .pf-tags::before {
   content: "";
   position: absolute;
-  left: 0;
-  top: 0;
-
-  width: 20px;
-  height: 20px;
-
-  background: #fff;
-
-  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  top: -2px;
+  left: -22px;
+  width: 24px;
+  height: 63px;
+  background: #f5f5f5;
+  border-bottom-right-radius: 43px;
+  z-index: 2;
+  transform: rotate(-19deg);
+  transform-origin: top left;
 }
 
 /* OVERLAY */
@@ -912,9 +917,9 @@ display: inline-block;
 
 /* LOGOS */
 .logo-track img {
-  height: 40px;
-  margin: 0 40px;
-  opacity: 0.8;
+  height: 60px;
+  margin: 0 15px;
+  opacity:1;
   transition: 0.3s;
 }
 
@@ -931,10 +936,268 @@ display: inline-block;
     transform: translateX(-50%);
   }
 }
+/* ===== GLOBAL SMOOTH SCROLL ===== */
+html {
+  scroll-behavior: smooth;
+}
 
+/* ===== FADE ANIMATION BASE ===== */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
 
+.fade-up.active {
+  opacity: 1;
+  transform: translateY(0);
+}
 
+/* ===== HERO TEXT ANIMATION ===== */
+.hero-content h1 {
+  animation: slideUp 1s ease forwards;
+}
 
+.hero-content p {
+  animation: slideUp 1.3s ease forwards;
+}
 
+.hero-btn {
+  animation: slideUp 1.6s ease forwards;
+}
+
+/* ===== KEYFRAMES ===== */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== BUTTON GRADIENT BORDER (YOUR EFFECT) ===== */
+.hero-btn {
+  position: relative;
+  padding: 12px 30px;
+  border-radius: 50px;
+  background: #fff;
+  border: none;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.hero-btn::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(120deg, #ff6a00, #ff00cc, #00c6ff, #ff6a00);
+  background-size: 300%;
+  border-radius: 50px;
+  z-index: -1;
+  animation: borderMove 4s linear infinite;
+}
+
+.hero-btn::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: white;
+  border-radius: 50px;
+  z-index: -1;
+}
+
+.hero-btn:hover::before {
+  animation-duration: 1s;
+}
+
+/* ===== BORDER ANIMATION ===== */
+@keyframes borderMove {
+  0% { background-position: 0% }
+  100% { background-position: 300% }
+}
+
+/* ===== NAVBAR SCROLL EFFECT ===== */
+.nav-wrapper {
+  transition: all 0.3s ease;
+}
+
+.nav-scrolled {
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(10px);
+  padding: 10px 0;
+}
+
+/* ===== SERVICES CARD HOVER ===== */
+.card {
+  transition: all 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+}
+
+/* ===== PORTFOLIO HOVER ===== */
+.pf-card img {
+  transition: 0.5s;
+}
+
+.pf-card:hover img {
+  transform: scale(1.1);
+}
+
+.pf-overlay {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.pf-card:hover .pf-overlay {
+  opacity: 1;
+}
+
+/* ===== LOGO AUTO SCROLL ===== */
+.logo-track {
+  display: flex;
+  gap: 40px;
+  animation: scrollLogos 20s linear infinite;
+}
+
+@keyframes scrollLogos {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ===== TESTIMONIAL IMAGE FLOAT ===== */
+.testi-img img {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* ===== CONTACT FORM INPUT ===== */
+.form-control {
+  transition: 0.3s;
+}
+
+.form-control:focus {
+  transform: scale(1.02);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+/* Prevent section hiding under navbar */
+section {
+  scroll-margin-top: 70px;
+}
+
+/* Optional: smooth feel fallback */
+html {
+  scroll-behavior: auto;
+}
+/* =========================
+   NAVBAR BASE
+========================= */
+.custom-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.nav-center {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-center a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+/* CONTACT BUTTON */
+.contact-btn {
+  background: #000;
+  color: #fff !important;
+  padding: 8px 16px;
+  border-radius: 50px;
+}
+
+/* =========================
+   HAMBURGER ICON
+========================= */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #000;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* ANIMATION */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* =========================
+   MOBILE STYLE
+========================= */
+@media (max-width: 991px) {
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-center {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: 0.3s ease;
+  }
+
+  .nav-center.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+}
+.footer-social{
+  margin-left: 47px;
+}
+.footer-addr{
+  background: #f5f7fa;
+  color: #1f5b84;
+}
 
 

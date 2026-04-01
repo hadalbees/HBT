@@ -629,17 +629,17 @@ bottom: 7px;
 
 /* 🔥 REAL FIGMA CURVED CUT */
 .pf-tags::before {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: -22px;
-  width: 24px;
-  height: 63px;
-  background: #f5f5f5;
-  border-bottom-right-radius: 43px;
-  z-index: 2;
-  transform: rotate(-19deg);
-  transform-origin: top left;
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -22px;
+    width: 17px;
+    height: 63px;
+    background: #f5f5f5;
+    border-bottom-right-radius: 43px;
+    z-index: 2;
+    transform: rotate(-36deg);
+    transform-origin: top left;
 }
 
 /* OVERLAY */

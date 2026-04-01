@@ -154,8 +154,8 @@ flex: 1;
 .contact-li{
     background: #0b3d60;
     color: #fff !important;
-    padding: 10px;
-    border-radius: 20px;
+    padding: 10px 20px;
+    border-radius: 50px;
 }
 
 .tag a:hover img {

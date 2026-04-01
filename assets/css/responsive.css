@@ -188,48 +188,6 @@ img {
   .testi-img img {
     width: 100%;
   }
-  .contact-title {
-    font-size: 24px;
-  }
-
-  .contact-text {
-    font-size: 14px;
-  }
-
-  .contact-form {
-    margin-top: 30px;
-  }
-
-  .info-item {
-    font-size: 14px;
-  }
-  .footer {
-    text-align: center;
-  }
-
-  .footer-logo {
-    margin-bottom: 15px;
-  }
-
-  .footer-links {
-    padding: 0;
-  }
-
-  .footer-links li {
-    list-style: none;
-  }
-
-  .social-icons {
-    justify-content: center;
-    margin-top: 10px;
-  }
-  .bottom-gradient span {
-    display: block;
-    max-width: 180px;
-    margin-left: -80px;
-    line-height: 1.4;
-    font-size: 17px;
-  }
 }
 
 
@@ -253,4 +211,11 @@ img {
   .services-header h2 {
     font-size: 24px;
   }
+  .avatar-group img {
+  width: 35px;
+  height: 35px;
+  }
+  .avatar-group {
+  right: 0;
+}
 }

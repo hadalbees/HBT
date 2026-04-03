@@ -33,14 +33,12 @@
 
   <body>
     <section class="hero">
-      <div class="nav-wrapper" style="
-    padding-top: 20px;>
+      <div class="nav-wrapper" style="padding-top: 20px">
         <div class="container">
-         <div class="custom-nav">
-
+          <div class="custom-nav">
             <!-- LEFT LOGO -->
             <div class="nav-left">
-              <img src="assets/img/logo.png" class="header-logo">
+              <img src="assets/img/logo.png" class="header-logo" />
             </div>
 
             <!-- RIGHT MENU ICON -->
@@ -58,7 +56,6 @@
               <a href="#portfolio">Portfolio</a>
               <a class="contact-li" href="#contact">Contact Us</a>
             </div>
-
           </div>
         </div>
       </div>
@@ -136,15 +133,17 @@
       <!-- your navbar + hero content here -->
 
       <div class="bottom-wrapper">
-        <div class="bottom-gradient"><span>We collaborate with 20+ Clients</span></div>
+        <div class="bottom-gradient">
+          <span>We collaborate with 20+ Clients</span>
+        </div>
 
         <div class="bottom-grey">
           <div class="logo-slider">
             <div class="logo-track">
-              <img src="assets/img/client-aayurkendra.png" alt="">
-              <img src="assets/img/client-shripandian.png" alt="">
-              <img src="assets/img/client-admissie.png" alt="">
-              <img src="assets/img/client-sivasakthi.png" alt="">
+              <img src="assets/img/client-aayurkendra.png" alt="" />
+              <img src="assets/img/client-shripandian.png" alt="" />
+              <img src="assets/img/client-admissie.png" alt="" />
+              <img src="assets/img/client-sivasakthi.png" alt="" />
             </div>
           </div>
         </div>
@@ -340,10 +339,23 @@
             </div>
           </div>
 
+           <div class="pf-card">
+            <!-- TAG BAR -->
+            <div class="pf-tags">
+              PHP &nbsp; LARAVEL &nbsp; MYSQL &nbsp; SEO
+            </div>
+
+            <img src="assets/img/portfolio1.jpg" />
+
+            <div class="pf-overlay">
+              <h4>Ecommerce </h4>
+            </div>
+          </div>
+
           <!-- CARD -->
           <div class="pf-card">
             <div class="pf-tags">
-              REACT &nbsp; FRAMER MOTION &nbsp; TAILWIND CSS &nbsp; SEO
+              REACT &nbsp; HTML &nbsp; TAILWIND CSS &nbsp; SEO
             </div>
 
             <img src="assets/img/portfolio2.jpg" />
@@ -352,37 +364,34 @@
               <h4>Enterprise Landing Page</h4>
             </div>
           </div>
-    
-         
         </div>
       </div>
     </section>
     <!-- <section id="testimonials" class="testimonial-section fade-up">
       <div class="container">
+
         <div class="owl-carousel testimonial-slider">
-      
+          
           <div class="testi-item">
-            <div class="row align-items-center">
-            
-              <div class="col-md-6">
-                <div class="quote">“</div>
+            <div class="testi-card">
+              <div class="row align-items-center">
+                <div class="col-7">
+                  <div class="quote">“</div>
 
-                <p class="testi-text">
-                  Working with Hadal Bee was a smooth experience. They created a
-                  modern, user-friendly website that truly elevated our online
-                  presence.
-                </p>
+                  <p class="testi-text">
+                    Working with Hadal Bee was a smooth experience...
+                  </p>
 
-                <hr />
+                  <hr />
 
-                <h6 class="name">name</h6>
-                <small>Google</small>
-              </div>
+                  <h6 class="name">John Doe</h6>
+                  <small>Google</small>
+                </div>
 
-            
-              <div class="col-md-6 text-center">
-                <div class="testi-img">
-                  <img src="assets/img/Rectangle 25.png" />
+                <div class="col-5">
+                  <div class="testi-img">
+                    <img src="assets/img/Rectangle 25.png" />
+                  </div>
                 </div>
               </div>
             </div>
@@ -390,32 +399,57 @@
 
         
           <div class="testi-item">
-            <div class="row align-items-center">
-              <div class="col-md-6">
-                <div class="quote">“</div>
+            <div class="testi-card">
+              <div class="row align-items-center">
+                <div class="col-7">
+                  <div class="quote">“</div>
 
-                <p class="testi-text">
-                  Amazing UI/UX work and great communication. Highly recommended
-                  for startups.
-                </p>
+                  <p class="testi-text">
+                    Amazing UI/UX work and great communication...
+                  </p>
 
-                <hr />
+                  <hr />
 
-                <h6 class="name">name</h6>
-                <small>Tesla</small>
+                  <h6 class="name">Alex</h6>
+                  <small>Tesla</small>
+                </div>
+
+                <div class="col-5">
+                  <div class="testi-img">
+                    <img src="assets/img/Rectangle 25.png" />
+                  </div>
+                </div>
               </div>
+            </div>
+          </div>
 
-              <div class="col-md-6 text-center">
-                <div class="testi-img">
-                  <img src="assets/img/Rectangle 25.png" />
+          <div class="testi-item">
+            <div class="testi-card">
+              <div class="row align-items-center">
+                <div class="col-7">
+                  <div class="quote">“</div>
+
+                  <p class="testi-text">
+                    Great service and excellent support team.
+                  </p>
+
+                  <hr />
+
+                  <h6 class="name">Sarah</h6>
+                  <small>Amazon</small>
+                </div>
+
+                <div class="col-5">
+                  <div class="testi-img">
+                    <img src="assets/img/Rectangle 25.png" />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-      
-        <div class="testi-arrows text-center mt-4">
+        <div class="testi-arrows">
           <button id="prevTesti" class="circle-btn">←</button>
           <button id="nextTesti" class="circle-btn">→</button>
         </div>
@@ -468,10 +502,10 @@
             <div class="contact-form">
               <form id="contactForm">
                 <div class="row g-3">
-                   <span
-                      id="formStatus"
-                      style="font-weight: bold; text-align: center"
-                    ></span>
+                  <span
+                    id="formStatus"
+                    style="font-weight: bold; text-align: center"
+                  ></span>
                   <div class="col-md-6">
                     <input
                       type="text"
@@ -534,17 +568,12 @@
       <div class="container">
         <div class="row">
           <!-- LEFT -->
-          <div class="col-md-4" style="
-    margin: 0 auto;
-    text-align: center;">
+          <div class="col-md-4" style="margin: 0 auto; text-align: center">
             <img src="assets/img/footer-logo.png" class="footer-logo" />
-
           </div>
 
           <!-- CENTER -->
-          <div class="col-md-3" style="
-    margin: 0 auto;
-    text-align: center;">
+          <div class="col-md-3" style="margin: 0 auto; text-align: center">
             <h5 class="footer-title">Navigation</h5>
 
             <ul class="footer-links">
@@ -557,19 +586,16 @@
           </div>
 
           <!-- RIGHT -->
-          <div class="col-md-5" style="
-    margin: 0 auto;
-    text-align: center;">
-            
-           <div class="info-item">
-                <span class="icon footer-addr"
-                  ><i class="fa-solid fa-location-dot"></i
-                ></span>
-                <span>
-                  No: 27, 3rd floor, Setu Complex, near Frontline Hospital,<br />
-                  Chinthamani Bazaar, Trichy - 620002
-                </span>
-              </div>
+          <div class="col-md-5" style="margin: 0 auto; text-align: center">
+            <div class="info-item">
+              <span class="icon footer-addr"
+                ><i class="fa-solid fa-location-dot"></i
+              ></span>
+              <span>
+                No: 27, 3rd floor, Setu Complex, near Frontline Hospital,<br />
+                Chinthamani Bazaar, Trichy - 620002
+              </span>
+            </div>
             <h5 class="footer-title footer-social">Social Links</h5>
 
             <div class="social-icons footer-social">

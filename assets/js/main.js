@@ -96,15 +96,17 @@ $(document).ready(function(){
   owl.owlCarousel({
     items: 1,
     loop: true,
-    margin: 20,
+    margin: 25,
     dots: false,
     nav: false,
-    autoplay: true,
-    autoplayTimeout: 4000,
-    smartSpeed: 800
+    autoplay:true,
+    smartSpeed: 700,
+    responsive: {
+      0: { items: 1 },
+      768: { items: 2 }
+    }
   });
 
-  // CUSTOM BUTTONS
   $("#nextTesti").click(function(){
     owl.trigger("next.owl.carousel");
   });
@@ -147,21 +149,7 @@ window.addEventListener("scroll", function(){
 // ===== OWL CAROUSEL =====
 $(document).ready(function(){
 
-  $(".portfolio-carousel").owlCarousel({
-    loop:true,
-    margin:20,
-    autoplay: false,
-    nav:false,
-    items:1
-  });
 
-  $("#nextBtn").click(function(){
-    $(".portfolio-carousel").trigger("next.owl.carousel");
-  });
-
-  $("#prevBtn").click(function(){
-    $(".portfolio-carousel").trigger("prev.owl.carousel");
-  });
 
   $(".testimonial-slider").owlCarousel({
     loop:true,

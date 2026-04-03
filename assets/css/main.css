@@ -1013,7 +1013,7 @@ html {
 }
 
 .nav-scrolled {
-  background: rgba(0,0,0,0.8);
+  background: transparent;
   backdrop-filter: blur(10px);
   padding: 10px 0;
 }
